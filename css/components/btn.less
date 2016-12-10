@@ -1,0 +1,79 @@
+@import "../variables.less";
+
+@border_outer: #fff;
+@border_outer_invert: #000;
+
+@border_inner: #e0e0e0;
+@border_inner_invert: #808080;
+
+@border_primary: #000;
+
+.btn{
+  display: inline-block;
+  margin: 0 0 8px 0;
+  padding: 0 6px;
+  text-align: center;
+  background: @background !important;
+  color: @color !important;
+  min-width: 75px;
+  height: 22px;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  font-size: @font-size;
+  font-family: @font-family;
+  line-height: 22px;
+  position: relative;
+  border: 1px solid;
+  border-color: @border_inner @border_inner_invert @border_inner_invert @border_inner;
+  border-radius: 0;
+  box-shadow: none;
+  z-index: 2;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  white-space: normal;
+  vertical-align: baseline;
+  font-weight: normal;
+  float: none;
+
+  &::before{
+    content: " ";
+    display: block;
+    top: -2px;
+    left: -2px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid;
+    border-color: @border_outer @border_outer_invert @border_outer_invert @border_outer;
+    z-index: -1;
+    padding: 1px;
+    background: @background;
+  }
+
+  &.btn-primary{
+    height: 20px;
+    line-height: 20px;
+    padding: 0;
+    top: 0;
+    left: 1px;
+    min-width: 73px;
+    box-shadow: 0 0 0 2px @border_primary;
+  }
+
+  &:focus{
+    outline-offset: -3px;
+  }
+
+  &:active{
+    border-color: @border_inner_invert @border_inner @border_inner @border_inner_invert;
+    outline: none;
+
+    &::before{
+      border-color: @border_outer_invert @border_outer @border_outer @border_outer_invert;
+    }
+  }
+}

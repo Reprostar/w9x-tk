@@ -1,0 +1,17 @@
+@import "variables.less";
+
+// Bootstrap 3 fix (border-box will be set on demand)
+*, *::after, *::before{
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+*{
+  font-family: @font-family;
+}
+
+h1,h2,h3,h4,h5,h6{
+  margin: 0 6px;
+  display: block;
+}

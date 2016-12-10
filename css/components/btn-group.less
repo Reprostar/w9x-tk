@@ -1,0 +1,29 @@
+@import "../variables.less";
+
+.btn-group{
+  display: block;
+  margin: 0 -3px;
+
+  & > .btn{
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+
+  &.btn-group-horizontal{
+    display: block;
+    margin-top: -3px;
+    margin-bottom: -3px;
+
+    & > .btn{
+      display: block;
+      clear: both;
+      width: 100%;
+      margin-top: 6px;
+      margin-bottom: 6px;
+
+      &.btn-primary{
+        width: ~"calc(100% - 2px)";
+      }
+    }
+  }
+}
